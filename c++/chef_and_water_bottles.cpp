@@ -12,20 +12,14 @@ int main()
     for (int i{}; i < test_cases; ++i)
     {
         std::cin >> n >> x >> k;
-        
-        int remaining_litres = k;
-        int remaining_bottles = n;
-        if (x > k)
+
+        if (k/x > n)
         {
-            std::cout << 0 << '\n';
+            std::cout << n << '\n';
         }
-        else {
-            while (remaining_bottles != 0 && remaining_litres != 0)
-            {
-                --remaining_bottles;
-                remaining_litres -= x;
-            }
-            std::cout << (n - remaining_bottles) << '\n';
+        else
+        {
+            std::cout << k/x << '\n';
         }
     }
 
