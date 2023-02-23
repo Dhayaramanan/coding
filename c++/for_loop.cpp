@@ -4,12 +4,10 @@ int main() {
     int lowerLimit{};
     int upperLimit{};
 
-    std::cin >> lowerLimit;
-    std::cin >> upperLimit;
+    std::cin >> lowerLimit >> upperLimit;
 
     for (int i{lowerLimit}; i <= upperLimit; ++i) {
-        if (i >= 1 && i <= 9) {
-            switch (i) {
+        switch (i) {
             case 1:
                 std::cout << "one\n";
                 break;
@@ -35,16 +33,14 @@ int main() {
                 std::cout << "eight\n";
                 break;
             case 9:
-            default:
                 std::cout << "nine\n";
                 break;
-            }
-        } else {
-            if (i % 2 == 0) {
-                std::cout << "even\n";
-            } else {
-                std::cout << "odd\n";
-            }
+            default:
+                if (i % 2 == 0) {
+                    std::cout << "even\n";
+                } else {
+                    std::cout << "odd\n";
+                }
         }
     }
 
